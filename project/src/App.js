@@ -1,17 +1,19 @@
 import React from 'react';
-//import { Link } from "react-router-dom";
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import Yourcart from './Yourcart';
-import AdminPage from './AdminPage';
-//import Contactus from './Contactus';
-//import Cussuport from './Cussuport';
-//import Aboutus from './Aboutus';
-
+import PaintingsPage from './PaintingsPage';
+import Hing from './Hing'; // The Hing component you referenced
 
 function App() {
   return (
-    <AdminPage/>
+    <Router>
+      <Routes>
+        
+        <Route path="/" element={<PaintingsPage />} />
+        <Route path="/hing" element={<Hing />} />
+      </Routes>
+    </Router>
   );
 }
 
